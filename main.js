@@ -20,11 +20,17 @@ function result() {
     const newStory = storyText;
     const xItem = randomValueFromArray(insertX);
     const yItem = randomValueFromArray(insertY);
-    const xItem = randomValueFromArray(insertZ);
+    const zItem = randomValueFromArray(insertZ);
+
+    const newStory = newStory.replace(':insertx:', xItem);
+    const newStory = newStory.replace(':inserty:', yItem);
+    const newStory = newStory.replace(':insertz:', zItem);
+    const newStory = newStory.replace(':insertx:', xItem);
 
 
   if(customName.value !== '') {
     const name = customName.value;
+    const newStory = newStory.replace('Bob', name)
 
   }
 
