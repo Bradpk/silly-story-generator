@@ -13,6 +13,11 @@ const insertY = ['the soup kitchen', 'Disneyland', 'the White House', 'the Shire
 const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away', 'burst into a ball of flames', 'exploded in a fiery inferno'];
 
 randomize.addEventListener('click', result);
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Enter") {
+    result();
+  }
+});
 
 function result() {
   let newStory = storyText;
