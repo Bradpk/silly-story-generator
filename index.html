@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
 
-    <title>Story Generator</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
 
-    <style>
-      body {
-        background-color: rgb(180, 182, 214);
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 5%;
-      }
+  <title>Story Generator</title>
 
-      div {
-        padding-bottom: 20px;
-      }
+  <style>
+    body {
+      background-color: rgb(180, 182, 214);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5%;
+    }
 
-      label {
-        display: flex;
-        justify-content: center;
-        font-size: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
+    .video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      height: 100vh;
+      z-index: -1;
+      display: block;
+    }
 
-      input[type="text"] {
-        text-align: center;
-        padding: 5px;;
-        border-radius: 2%;
-        border-style: hidden;
-        cursor: pointer;
-        font-size: 20px;
-      }
+    div {
+      padding-bottom: 20px;
+      color: white;
+    }
 
-      button {
-        border-radius: 2%;
-        border-style: hidden;
-        padding: 5px;
-        font-size: 20px;
-      } 
+    h1 {
+      color: white;
+      font-family: cursive;
+      letter-spacing: 10px;
+    }
 
-      button:hover{
-        cursor: pointer;
-        background-color: rgb(0, 255, 0)
-      }
+    label {
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
+    input[type="text"] {
+      text-align: center;
+      padding: 5px;
+      ;
+      border-radius: 2%;
+      border-style: hidden;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    button {
+      border-radius: 2%;
+      border-style: hidden;
+      padding: 5px;
+      font-size: 20px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(0, 255, 0)
+    }
+
+    p {
+      border-radius: 2%;
+      background-color: rgb(255, 255, 255);
+      color: #000000;
+      text-align: center;
+      width: 500px;
+      letter-spacing: 0.5px;
+      word-spacing: 5px;
+      font-size: 25px;
+      line-height: 2;
+    }
+
+    .units {
+      display: flex;
+    }
+
+    @media (max-width: 576px) {
       p {
         border-radius: 2%;
-        background-color: rgb(255, 255, 255);
-        color: #000000;
-        text-align: center;
-        width: 500px;
-        letter-spacing: 0.5px;
-        word-spacing: 5px;
-        font-size: 25px;
-        line-height: 2;
-      } 
-
-      .units{
-        display:flex;
-      }
-
-      @media (max-width: 576px) {
-    p{
-      border-radius: 2%;
         background-color: rgb(255, 255, 255);
         color: #000000;
         text-align: center;
@@ -75,29 +94,31 @@
         letter-spacing: 0.5px;
         word-spacing: 3px;
         font-size: 19px;
-        line-height: 1.9; 
+        line-height: 1.9;
+      }
     }
-}
+  </style>
+</head>
 
-    </style>
-  </head>
-  
-  <body>
-    <h1>Story Generator</h1>
-    <div>
-      <label for="customname">Enter custom name</label><br>
-      <input id="customname" type="text" placeholder="" />
-    </div>
-    <div class="units">
-      <label for="us">US</label
-      ><input id="us" type="radio" name="ukus" value="us" checked />
-      <label for="uk">UK</label
-      ><input id="uk" type="radio" name="ukus" value="uk" />
-    </div>
-    <div>
-      <button class="randomize">Generate random story</button>
-    </div>
-    <p class="story"></p>
-    <script src="main.js"></script>
-  </body>
+<body>
+  <video autoplay loop muted class="video" id="story-video">
+    <source src="/silly-story-generator/img/story.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h1>Story Generator</h1>
+  <div>
+    <label for="customname">Enter custom name</label><br>
+    <input id="customname" type="text" placeholder="" />
+  </div>
+  <div class="units">
+    <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked />
+    <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk" />
+  </div>
+  <div>
+    <button class="randomize">Generate random story</button>
+  </div>
+  <p class="story"></p>
+  <script src="main.js"></script>
+</body>
+
 </html>
