@@ -1,3 +1,9 @@
-# silly-story-generator
+### Story Generator
 
-An early project I completed that creates a random story which incorporates the users name and a choice of metric or imperial measurements. 
+This is an early project I completed that generates random stories. It allows users to enter a custom name to be used in the story and toggle between imperial or metric measurements.
+
+### Tech Stack
+
+JavaScript 
+HTML
+CSS
