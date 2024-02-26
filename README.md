@@ -4,6 +4,6 @@ This is an early project I completed that generates random stories. It allows us
 
 ### Tech Stack
 
-JavaScript 
-HTML
+JavaScript, 
+HTML, 
 CSS
