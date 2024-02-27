@@ -107,10 +107,25 @@
         line-height: 1.9;
       }
     }
+
+    .fade-in {
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  
   </style>
 </head>
 
-<body>
+<body class="fade-in">
   <video autoplay loop muted class="video" id="story-video">
     <source src="/silly-story-generator/img/story.mp4" type="video/mp4">
     Your browser does not support the video tag.
